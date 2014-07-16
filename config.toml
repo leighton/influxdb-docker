@@ -19,8 +19,12 @@ read-timeout = "5s"
   enabled = true
   port = 2004
   database = "graphite"  # store graphite data in this database
-
-
+ 
+  [input_plugins.udp]
+  enable = true
+  port = 6004
+  database = "udp"
+ 
 [raft]
 port = 8090
 dir  = "/opt/influxdb/shared/data/raft"
